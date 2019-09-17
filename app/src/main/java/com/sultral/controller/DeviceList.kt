@@ -22,7 +22,7 @@ class DeviceList : AppCompatActivity() {
     //Bluetooth
     private var myBluetooth: BluetoothAdapter? = null
     private var pairedDevices: Set<BluetoothDevice>? = null
-    var EXTRA_ADDRESS = "device_address"
+    public var EXTRA_ADDRESS = "device_address"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
