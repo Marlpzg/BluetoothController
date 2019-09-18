@@ -31,16 +31,6 @@ class Control : AppCompatActivity() {
     private var isBtConnected = false
     //SPP UUID. Look for it
     val myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
-    var ha = Handler()
-    var running = true
-
-    val runnable = object : Runnable {
-        override fun run() {
-            sendAction("0")
-            if(running)
-                ha.postDelayed(this, 100) // reschedule the handler
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +54,6 @@ class Control : AppCompatActivity() {
 
     override fun onDestroy() {
         Disconnect()
-        running = false
         super.onDestroy()
     }
 
@@ -137,7 +126,6 @@ class Control : AppCompatActivity() {
                 finish()
             } else {
                 msg("Connected.")
-                ha.post(runnable)
                 isBtConnected = true
             }
             progress!!.dismiss()
