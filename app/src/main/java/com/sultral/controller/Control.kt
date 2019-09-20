@@ -50,6 +50,18 @@ class Control : AppCompatActivity() {
             sendAction("1")
         }))
 
+        btn_back.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
+            sendAction("2")
+        }))
+
+        btn_right.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
+            sendAction("3")
+        }))
+
+        btn_left.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
+            sendAction("4")
+        }))
+
     }
 
     override fun onDestroy() {
