@@ -62,6 +62,26 @@ class Control : AppCompatActivity() {
             sendAction("4")
         }))
 
+        btn_open.setOnClickListener {
+            sendAction("5")
+        }
+
+        btn_close.setOnClickListener {
+            sendAction("6")
+        }
+
+        btn_lower.setOnClickListener {
+            sendAction("7")
+        }
+
+        btn_lift.setOnClickListener {
+            sendAction("8")
+        }
+
+        btn_shoot.setOnClickListener {
+            sendAction("9")
+        }
+
     }
 
     override fun onDestroy() {
