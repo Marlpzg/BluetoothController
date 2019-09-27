@@ -54,32 +54,40 @@ class Control : AppCompatActivity() {
             sendAction("2")
         }))
 
-        btn_right.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
+        btn_rightFrwd.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
             sendAction("3")
         }))
 
-        btn_left.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
+        btn_leftFrwd.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
             sendAction("4")
         }))
 
-        btn_open.setOnClickListener {
+        btn_rightBack.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
             sendAction("5")
-        }
+        }))
 
-        btn_close.setOnClickListener {
+        btn_leftBack.setOnTouchListener(RepeatListener(100, 100, View.OnClickListener {
             sendAction("6")
-        }
+        }))
 
-        btn_lower.setOnClickListener {
+        btn_open.setOnClickListener {
             sendAction("7")
         }
 
-        btn_lift.setOnClickListener {
+        btn_close.setOnClickListener {
             sendAction("8")
         }
 
-        btn_shoot.setOnClickListener {
+        btn_lower.setOnClickListener {
             sendAction("9")
+        }
+
+        btn_lift.setOnClickListener {
+            sendAction("10")
+        }
+
+        btn_shoot.setOnClickListener {
+            sendAction("11")
         }
 
     }
